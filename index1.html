@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livewell Housing Solutions Ltd</title>
+    <style>
+        /* Your existing styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            text-align: center;
+            padding: 1em;
+            background-color: #4CAF50;
+            color: white;
+            position: relative;
+            width: 100%;
+            top: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 100 1px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 2em;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cover-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 1em;
+        }
+
+        .thumbnail-gallery {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 1em;
+        }
+
+        .thumbnail {
+            width: 30%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .media-content {
+            width: 100%;
+            height: auto;
+            margin-bottom: 1em;
+        }
+        
+        .video-container{
+        	width: 100%;
+            height: auto;
+            margin-bottom: 1em;
+        	}
+        
+             .main-video  {
+            width: 100%;
+            height: auto;
+        }
+
+        .download-link {
+            display: block;
+            margin-top: 0.5em;
+            color: #4CAF50;
+            text-decoration: none;
+            
+            cursor: pointer;
+            border-radius: 5px;
+            
+        }
+
+        .download-link:hover {
+            text-decoration: underline;
+            
+        }
+        
+        
+        
+        
+        .thumbnail-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+
+        .thumbnail {
+            width: 30%;
+            cursor: pointer;
+            border: 3px solid #555;
+            border-radius: 5px;
+            transition: border 0.3s ease;
+        }
+
+        .thumbnail:hover {
+            border: 3px solid #00f;
+        }
+
+
+
+
+.controls {
+            margin-top: 15px;
+        }
+
+        .controls button {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+            background-color: #888;
+            color: #fff;
+            transition: background-color 0.3s ease;
+        }
+
+        .controls button:hover {
+            background-color: #555;
+        }
+        
+
+
+
+
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #4CAF50;
+            color: white;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 60px;
+        }
+
+        form label {
+            margin-top: 10px;
+        }
+
+        form input, form textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #45a049;
+        }
+
+        
+
+        .business-model {
+            display: none;
+            padding: 2em;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            margin-top: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button-container button:hover {
+            background-color: #45a049;
+        }
+
+        .small-image {
+            width: 20px; /* Adjust the size as needed */
+            height: auto; 
+        }
+
+        .unread-message-button {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .button-row {
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        
+        .thumbnail-image {
+        width: 150px; /* Set the width to your desired thumbnail size */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 5px; /* Optional: rounded corners */
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: slight shadow for a nicer effect */
+    
+}
+        
+        
+        #employment-letter-wrapper {
+            display: none;
+            margin-top: 20px;
+        }
+        
+    
+    
+    .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+
+        .logo {
+            max-width: 60px;
+            margin-right: 20px;
+        }
+
+        .company-info h1 {
+            font-size: 24px;
+            color: #4CAF50;
+            margin: 0;
+        }
+
+        .company-info p {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin: 0;
+        }
+
+        h2 {
+            text-align: center;
+            color: #4CAF50;
+            font-size: 22px;
+            margin: 20px 0;
+        }
+
+        .instruction {
+            text-align: center;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        form fieldset {
+            border: 1px solid #4CAF50;
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+
+        form legend {
+            font-size: 18px;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            color: #4CAF50;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form input[type="date"] {
+            width: calc(100% - 10px);
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #bdc3c7;
+            border-radius: 3px;
+        }
+
+        .guarantee-question {
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        .terms {
+            margin-top: 20px;
+            color: #4CAF50;
+        }
+
+        form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #2ecc71;
+        }
+
+        #serial-number-container {
+            word-wrap: break-word;
+            max-width: 100%;
+            overflow-wrap: break-word;
+            font-size: 8px;
+        }
+
+        .sn {
+            display: flex;
+            align: center;
+            margin: 0;
+        }
+    
+    
+    
+    
+    
+    
+    .container1 {
+    max-width: 800px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-header1 {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.logo1 {
+    max-width: 60px;
+    margin-right: 20px;
+}
+
+.company-info1 h1 {
+    font-size: 24px;
+    color: #4CAF50;
+    margin: 0;
+}
+
+.company-info1 p {
+    font-size: 14px;
+    color: #4CAF50;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    color: #4CAF50;
+    font-size: 22px;
+    margin: 20px 0;
+}
+
+.instruction1 {
+    text-align: center;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+form fieldset1 {
+    border: 1px solid #d0d0d0;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+form legend1 {
+    font-size: 18px;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+form label1 {
+    display: block;
+    margin-bottom: 8px;
+    color: #4CAF50;
+}
+
+form input1[type="text"],
+form input1[type="email"],
+form input1[type="date"] {
+    width: calc(100% - 10px);
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #bdc3c7;
+    border-radius: 3px;
+}
+
+.guarantee-question1 {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.terms1 {
+    margin-top: 20px;
+    color: #34495e;
+}
+
+form button1 {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+form button1:hover {
+    background-color: #2ecc71;
+}
+
+
+#serial-number-container1 {
+            word-wrap: break-word;
+            max-width: 100%;
+            overflow-wrap: break-word;
+            font-size: 8px; /* Adjust this value as needed */
+        }
+        
+        .sn1 {
+            display: flex;
+            align: center;
+            margin: 0;
+        }
+
+
+
+
+
+
+
+.container1 {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 1800px;
+            padding: 20px;
+            transition: max-height 0.5s ease-in-out;
+            overflow: hidden;
+            max-height: 2000px; /* Increased to accommodate the whole form */
+        }
+
+        .form-header1 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 10px;
+        }
+
+        .logo {
+            width: 80px;
+            height: auto;
+            margin-right: 15px;
+        }
+
+        .company-info1 h1 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #4CAF50;
+        }
+
+        .company-info1 p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        h2 {
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+
+        fieldset {
+            border: 1px solid #4CAF50;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            padding: 0 5px;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input[type="text"], input[type="email"], input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+        }
+
+        button:hover {
+            background-color: #4CAF50;
+        }
+
+        .collapsed {
+            max-height: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .expanded {
+            max-height: 3000px; /* Adjust this value based on the form height */
+            padding: 20px;
+        }
+
+
+
+    </style>
+    <script>
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+        });
+
+        function requestPassword(callback) {
+            const password = prompt('Please enter the password to access this content:');
+            if (password === 'correctPassword') {
+                callback();
+            } else {
+                alert('Incorrect password. Access denied.');
+            }
+        }
+
+        function downloadMedia(url) {
+            requestPassword(() => {
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = url.split('/').pop();
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
+        }
+
+
+
+
+        function toggleSection(sectionId, buttonId, iconId, messageTextId) {
+            var section = document.getElementById(sectionId);
+            var button = document.getElementById(buttonId);
+            var icon = document.getElementById(iconId);
+            var messageText = document.getElementById(messageTextId);
+
+            if (section.style.display === "none" || section.style.display === "") {
+                section.style.display = "block";
+                messageText.innerText = "READ MESSAGE";
+                icon.src = "/84tpIkbEsTge4.png!sw800.png";
+            } else {
+                section.style.display = "none";
+                messageText.innerText = "UNREAD MESSAGE";
+                icon.src = "/New Message Flat Icon, Email and Website Button Stock Vector - Illustration of favorite, forum_ 91687771.jpeg";
+            }
+        }
+
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+
+
+
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            const form = document.getElementById('contact-form');
+            const formData = new FormData(form);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const message = formData.get('message');
+            const subject = 'Contact Form Submission';
+            const body = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
+
+            const mailtoLink = `mailto:livewell.equity@gmail.com?cc=${email}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailtoLink;
+        }
+
+        function changeAudioLanguage(language) {
+            const audioSource = document.getElementById('audio-source');
+            const audio = document.getElementById('audio');
+            switch (language) {
+                case 'yoruba':
+                    audioSource.src = '/llv_0_20240720130923-[AudioTrimmer.com].mp3';
+                    break;
+                case 'igbo':
+                    audioSource.src = '/llv_0_20240720130923-[AudioTrimmer.com].mp3';
+                    break;
+                case 'hausa':
+                    audioSource.src = '/llv_0_20240720130923-[AudioTrimmer.com].mp3';
+                    break;
+                case 'pigin':
+                    audioSource.src = '/AAUD-20240720-WA0182..mp3';
+                    break;
+                default:
+                    audioSource.src = '/lv_0_20240720130923-[AudioTrimmer.com].mp3';
+            }
+            audio.load();
+            audio.play();
+        }
+        
+        
+        
+        function requestAdminAccess() {
+            const password = prompt('Please enter the admin password:');
+            if (password === 'adminPassword') {
+                document.getElementById('employment-letters').style.display = 'block'; // Show the section
+            } else {
+                alert('Incorrect password. Access denied.');
+            }
+        }
+
+        
+        function populateSalary() {
+    const position = document.getElementById('position').value;
+    let salary;
+    
+    switch (position) {
+        case 'relationship_officer':
+            salary = '#100,000 (Commission Based)';
+            break;
+        case 'community_manager':
+            salary = '#200,000 (Performance Based)';
+            break;
+        case 'executive':
+            salary = '#100,000'; // Default salary for "executive" if no specific role is matched.
+            break;
+        case 'General Manager':
+            salary = '#100,000';
+            break;
+        case 'Secretary':
+            salary = '#70,000';
+            break;
+        case 'Account and Risk Assessment Officer': 
+            salary = '#80,000';
+            break;
+        case 'Public Relation Officer':
+            salary = 'Not Specified';
+            break;
+        default:
+            salary = 'Not Specified';
+    }
+    
+    document.getElementById('salary').value = salary;
+}
+
+        function generateLetter(event) {
+            event.preventDefault();
+            const form = document.getElementById('employment-form');
+            const fullName = form.full_name.value;
+            const email = form.email.value;
+            const address = form.address.value;
+            const phone = form.phone.value;
+            const position = form.position.value;
+            const salary = form.salary.value;
+            const employmentNo = `EMP-${Date.now()}`; // Simple timestamp-based ID
+
+            const letterContent = `
+           
+            <h2>Employment Offer Letter</h2>
+                <p>Dear ${fullName},</p>
+                <p>Position of ${position}.</p>
+                <p>We are pleased to offer you the position of ${position} at Livewell Housing Solutions Ltd. Your employment number is ${employmentNo}. The salary for your role is ${salary}.</p>
+                
+                Please find below your details:</p>
+                <ul>
+                    <li><strong>Full Name:</strong> ${fullName}</li>
+                    <li><strong>Email:</strong> ${email}</li>
+                    <li><strong>Address:</strong> ${address}</li>
+                    <li><strong>Phone:</strong> ${phone}</li>
+                    <li><strong>Position:</strong> ${position}</li>
+                    <li><strong>Salary:</strong> ${salary}</li>
+                    <li><strong>Employment No:</strong> ${employmentNo}</li>
+                </ul>
+                <p>Please let us know if you have any questions or require further details.</p>
+                <p>Welcome to the team!</p>
+                <p>Yours Faithfully,</p>
+                <p>Livewell Housing Solutions Ltd </p>
+                <p><img src="/Screenshot_20240728-040042.jpg" alt="livewell official" class="thumbnail-image" /></p>
+                    <p>Motto: ... own your tomorrow </p>
+                
+                
+            `;
+            
+            
+            
+            
+            
+            
+
+            document.getElementById('letter-content').innerHTML = letterContent;
+            document.getElementById('letter-output').style.display = 'block';
+        }
+        
+        
+        
+        function generateAndEmailLetter() {
+            const form = document.getElementById('employment-form');
+            const fullName = form.full_name.value;
+            const email = form.email.value;
+            const letterContent = `
+                Dear ${fullName},\n\n
+                We are pleased to offer you the position of ${form.position.value} at Livewell Housing Solutions Ltd. Your salary is ${form.salary.value}.\n\n
+                Yours Faithfully,\n
+                Livewell Housing Solutions Ltd
+            `;
+
+            const subject = 'Employment Letter from Livewell Housing Solutions Ltd';
+            const mailtoLink = `mailto:livewell.equity@gmail.com,${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(letterContent)}`;
+            window.location.href = mailtoLink;
+        }
+
+        function closeEmploymentLetter() {
+            document.getElementById('employment-letters').style.display = 'none';
+        }
+
+        
+        
+        
+        function toggleEmploymentLetter() {
+            const content = document.getElementById('employment-letter-content');
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+            } else {
+                content.style.display = 'none';
+            }
+        }
+
+        
+        
+        
+        function playVideo(thumbnail) {
+            const videoUrl = thumbnail.getAttribute('data-video-url');
+            const videoElement = document.getElementById('main-video');
+            videoElement.src = videoUrl;
+        }
+        
+        
+        
+        
+        
+        
+        function generateSerialNumber() {
+        const serialNumber = 'LW-' + Math.floor(Math.random() * 1000000);
+        document.getElementById('serial-number1').innerText = serialNumber;
+        document.getElementById('serialNo').value = serialNumber;
+    }
+
+    
+
+    function toggleForm() {
+        const formContainer = document.getElementById('form-container');
+        if (formContainer.classList.contains('expanded')) {
+            formContainer.classList.remove('expanded');
+            formContainer.classList.add('collapsed');
+        } else {
+            formContainer.classList.remove('collapsed');
+            formContainer.classList.add('expanded');
+        }
+    }
+
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    document.addEventListener('DOMContentLoaded', generateSerialNumber);
+        
+        
+        
+        
+        function sendFormData(event) {
+    event.preventDefault(); // Prevent the form from submitting the default way
+
+    // Collect form data
+    const formData = new FormData(document.getElementById('membership-form'));
+
+    // Extract individual fields from the form data
+    const fullName = formData.get('fullname');
+    const stateOfOrigin = formData.get('stateOfOrigin');
+    const dob = formData.get('dob');
+    const residentialAddress = formData.get('residentialAddress');
+    const maritalStatus = formData.get('maritalStatus');
+    const mobileNo = formData.get('mobileNo');
+    const occupation = formData.get('occupation');
+    const monthlySavings = formData.get('monthlySavings');
+    const email = formData.get('email');
+    const date = formData.get('date');
+    const kinFullName = formData.get('kinFullName');
+    const relationship = formData.get('relationship');
+    const kinAddress = formData.get('kinAddress');
+    const refereeName = formData.get('refereeName');
+    const refereePhone = formData.get('refereePhone');
+    const refereeEmail = formData.get('refereeEmail');
+    const refereeSerialNo = formData.get('refereeSerialNo');
+    const refereeSignature = formData.get('refereeSignature');
+    const refereeAddress = formData.get('refereeAddress');
+    const signature = formData.get('signature');
+
+    // Prepare email content
+    const emailBody = `
+        Full Name: ${fullName}%0A
+        State of Origin: ${stateOfOrigin}%0A
+        Date of Birth: ${dob}%0A
+        Residential Address: ${residentialAddress}%0A
+        Marital Status: ${maritalStatus}%0A
+        Mobile No: ${mobileNo}%0A
+        Occupation: ${occupation}%0A
+        Monthly Savings: ${monthlySavings}%0A
+        Email Address: ${email}%0A
+        Date of Registration: ${date}%0A%0A
+
+        Next of Kin:%0A
+        Full Name: ${kinFullName}%0A
+        Relationship: ${relationship}%0A
+        Address: ${kinAddress}%0A%0A
+
+        Referee:%0A
+        Name of Referee: ${refereeName}%0A
+        Referee Phone Number: ${refereePhone}%0A
+        Referee Email: ${refereeEmail}%0A
+        Referee Serial No: ${refereeSerialNo}%0A
+        Referee Signature: ${refereeSignature}%0A
+        Referee Address: ${refereeAddress}%0A%0A
+
+        Signature & Date: ${signature}
+    `;
+
+    // Create the mailto link with CC to both addresses
+    const mailtoLink = `mailto:livewell.equity@gmail.com?cc=${encodeURIComponent(email)}&bcc=${encodeURIComponent(refereeEmail)},mondaykingsley80@gmail.com&subject=Membership Registration Form Submission&body=${encodeURIComponent(emailBody)}`;
+
+    // Open the mailto link in a new window or tab
+    window.open(mailtoLink, '_blank');
+}
+
+        
+      
+
+
+
+
+
+
+
+  
+        
+        
+        
+        
+      
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Livewell Housing Solutions Ltd</h1>
+        <p><strong>Motto</strong>: <i>...own your tomorrow</i>.</p>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#admin" onclick="requestAdminAccess()">Admin</a></li> <!-- Admin button added -->
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Admin section -->
+    	
+   
+   
+    	    	
+    <section id="employment-letters" style="display: none;">
+<h2>Employment Form</h2>
+        
+        <form id="employment-form" onsubmit="generateLetter(event)">
+                <label for="full_name">Full Name:</label>
+                <input type="text" id="full_name" name="full_name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required>
+
+                
+
+<label for="position">Position:</label>
+<select id="position" name="position" onchange="populateSalary()" required>
+	<option value="select job position">Select Job Offering</option>
+    <option value="relationship_officer">Relationship Officer</option>
+    <option value="community_manager">Community Manager</option>
+    <option value="General Manager">General Manager (Executive)</option>
+    <option value="Secretary">Secretary (Executive)</option>
+    <option value="Account and Risk Assessment Officer">Account and Risk Assessment Officer (Executive)</option>
+    <option value="Public Relation Officer">Public Relation Officer (Executive)</option>
+    <option value="executive">Other Executive</option>
+</select>
+<label for="salary">Salary:</label>
+                <input type="text" id="salary" name="salary" readonly>
+
+                <button type="submit">Submit</button>
+                <br>
+                <button type="button" onclick="closeEmploymentLetter()">Close</button>
+                <br>
+            <button type="button" onclick="scrollToTop()">Back to Top</button>
+            </form>
+        <div id="letter-output" style="display: none;">
+         
+     
+            <div id="letter-content"></div>
+            
+            
+            
+            <div class="button-row">
+            
+            
+            
+            <button type="button" onclick="generateAndEmailLetter()">Send</button>
+                    <button type="button" onclick="closeEmploymentLetter()">Close</button>
+            
+            
+        </div>
+        
+        
+        <div class="button-container">
+            <button type="submit">Submit</button>
+            <button type="button" onclick="toggleForm()">Close</button>
+            <button type="button" onclick="scrollToTop()">Back to Top</button>
+        </div>
+        
+        
+        
+        </div>
+      
+
+<div class="container1 expanded" id="form-container">
+    <div class="form-header1">
+        <img src="/storage/emulated/0/Pictures/Screenshot/Screenshot_20240825-051817.jpg" alt="Livewell Logo" class="logo">
+        <div class="company-info1">
+            <h1>Livewell Housing Solutions Limited</h1>
+            <p>...own your tomorrow</p>
+        </div>
+    </div>
+
+    <h2>MEMBERSHIP FORM</h2>
+    <p class="instruction1">Complete the form below to sign up for membership to Livewell Housing Community</p>
+
+    <p class="SN1">Serial Number: <strong id="serial-number-container1"><span id="serial-number1"></span></strong></p>
+    <br>
+    <form id="membership-form" onsubmit="sendFormData(event)">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="serialNo">Serial No:</label>
+            <input type="text" id="serialNo" name="serialNo">
+
+            <label for="stateOfOrigin">State of Origin:</label>
+            <input type="text" id="stateOfOrigin" name="stateOfOrigin">
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob">
+
+            <label for="residentialAddress">Residential Address:</label>
+            <input type="text" id="residentialAddress" name="residentialAddress">
+
+            <label for="maritalStatus">Marital Status:</label>
+            <input type="text" id="maritalStatus" name="maritalStatus">
+
+            <label for="mobileNo">Mobile No:</label>
+            <input type="text" id="mobileNo" name="mobileNo">
+
+            <label for="occupation">Occupation:</label>
+            <input type="text" id="occupation" name="occupation">
+
+            <label for="monthlySavings">Monthly savings (optional):</label>
+            <input type="text" id="monthlySavings" name="monthlySavings">
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email">
+                
+            <label for="date">Date of Registration:</label>
+            <input type="date" id="date" name="date" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Next of Kin</legend>
+            <label for="kinFullName">Full Name:</label>
+            <input type="text" id="kinFullName" name="kinFullName">
+
+            <label for="relationship">Relationship:</label>
+            <input type="text" id="relationship" name="relationship">
+
+            <label for="kinAddress">Address:</label>
+            <input type="text" id="kinAddress" name="kinAddress">
+
+            <label for="kinSerialNo">Kin Serial No:</label>
+            <input type="text" id="kinSerialNo" name="kinSerialNo" readonly>
+        </fieldset>
+
+        <fieldset>
+            <legend>Referee</legend>
+            <label for="refereeName">Name of Referee:</label>
+            <input type="text" id="refereeName" name="refereeName">
+
+            <label for="refereePhone">Referee Phone Number:</label>
+            <input type="text" id="refereePhone" name="refereePhone">
+
+            <label for="refereeEmail">Referee Email address:</label>
+            <input type="text" id="refereeEmail" name="refereeEmail">
+
+            <label for="refereeSerialNo">Referee Serial No:</label>
+            <input type="text" id="refereeSerialNo" name="refereeSerialNo">
+
+            <label for="refereeSignature">Referee Signature:</label>
+            <input type="text" id="refereeSignature" name="refereeSignature">
+
+            <label for="refereeAddress">Address:</label>
+            <input type="text" id="refereeAddress" name="refereeAddress">
+        </fieldset>
+
+        <p class="guarantee-question1">
+            CAN YOU GUARANTEE SOMEONE INTRODUCED BY YOU? <span>Yes / No</span>
+        </p>
+
+        <p class="terms1">
+            Do you agree to the terms and conditions and promise to abide by the regulation governing LIVEWELL HOUSING SOL. LTD? If yes, please Sign:
+        </p>
+
+        <label for="signature">Signature & Date:</label>
+        <input type="text" id="signature" name="signature">
+
+        <div class="button-container">
+            <button type="submit">Submit</button>
+            <button type="button" onclick="toggleForm()">Close</button>
+            <button type="button" onclick="scrollToTop()">Back to Top</button>
+        </div>
+    </form>
+</div>
+
+	
+	
+
+    
+    </div>
+    
+    
+    
+   
+</section>
+    <section id="home">
+        <h2>Home</h2>
+        <img src="/IMG-20240822-WA0129.jpg" alt="Cover Image" class="cover-image">
+        <p>Your trusted partner in housing solutions.</p>
+    </section>
+    
+    
+
+    <section id="services">
+        <h2>Services</h2>
+        <div class="thumbnail-gallery">
+            <img src="/IMG-20240707-WA0064.jpg" alt="lease plan" class="thumbnail">
+            <img src="/IMG-20240726-WA0127.jpg" alt="community housing cooperative" class="thumbnail">
+            <img src="/IMG-20240708-WA0378.jpg" alt="Ease Rent" class="thumbnail">
+        </div>
+        <ul>
+            <li>Ease Rent</li>
+            <li>Home Ownership</li>
+            <li>Property Management</li>
+            <li>Real Estate Consultancy</li>
+        </ul>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <img src="/IMG-20240707-WA0058.jpg" alt="Livewell Housing Solutions Ltd" class="cover-image">
+        <p>Livewell Housing Solutions Ltd is dedicated to providing quality housing solutions and expert advice on property management.</p>
+        
+        
+    <!-- First Unread Message Button and Section -->
+<button class="unread-message-button" id="message-button-1" onclick="toggleSection('business-model-1', 'message-button-1', 'message-icon-1', 'message-text-1')">
+    <span id="message-text-1">UNREAD MESSAGE</span>
+    <img id="message-icon-1" src="path/to/unread-icon.jpg" alt="Unread Message Icon" class="small-image">
+</button>
+
+<section id="business-model-1" class="business-model">
+    <ul>
+        <h1>Livewell Housing Solutions Ltd </h1>
+        <p><strong>Motto</strong>: <i>"Own Your Tomorrow"</i></p>
+    </ul>
+
+    <h2>Who We Are:</h2>
+    <p>Livewell Housing Solutions Ltd helps people find, buy, and manage homes. We make sure everyone gets the best place to live.</p>
+
+    <h2>Our Vision:</h2>
+    <p>We want to be the best at providing affordable and smart housing, helping people and communities live happily in their homes.</p>
+
+    <h2>Our Mission:</h2>
+    <p>We aim to change the housing industry by offering various services like managing properties and giving advice on buying homes. We focus on quality and excellent service.</p>
+
+    <h2>What We Do:</h2>
+    <ul>
+        <li><strong>Property Management:</strong> We take care of houses and buildings to make sure they are in good shape and their value increases - Through our Rents & Sales.</li>
+        <li><strong>Real Estate Consultancy:</strong> We help people make smart decisions when buying or investing in properties -Through Home Ownership Plan.</li>
+        <li><strong>Housing Solutions:</strong> We create affordable and innovative housing options for everyone - Through the Ease Rents Program</li>
+        
+        
+    </ul>
+
+    <h2>Why Choose Us:</h2>
+    <ul>
+        <li><strong>Expertise:</strong> Our team knows a lot about houses and properties.</li>
+        <li><strong>Innovation:</strong> We always look for new ideas to make our services better.</li>
+        <li><strong>Client-Centric Approach:</strong> We focus on what our clients need and give them special attention.</li>
+        <li><strong>Integrity:</strong> We are honest and fair in everything we do.</li>
+    </ul>
+
+    <h2>Contact Us:</h2>
+    <ul>
+        <p>If you want to know more or need help with housing, contact us at:</p>
+        <p>Address: No 15 Ijegun road, old garage Ikotun.</p>
+        <p>Email: livewell.equity@gmail.com</p>
+        <p>Phone: 08021712005 or 07045786155</p>
+    </ul>
+
+    <p>Livewell Housing Solutions Ltd - Own Your Tomorrow!</p>
+
+    <div class="button-container">
+        <button onclick="toggleSection('business-model-1', 'message-button-1', 'message-icon-1', 'message-text-1')">Close</button>
+        <button onclick="scrollToTop()">Back to Top</button>
+    </div>
+</section>
+
+<br>
+
+<!-- Second Unread Message Button and Section -->
+<button class="unread-message-button" id="message-button-2" onclick="toggleSection('business-model-2', 'message-button-2', 'message-icon-2', 'message-text-2')">
+    <span id="message-text-2">MEMBERSHIP REGISTRATION</span>
+    <img id="message-icon-2" src="path/to/unread-icon.jpg" alt="Membership Registration Icon" class="small-image">
+</button>
+
+<section id="business-model-2" class="business-model">
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="form-header1">
+        <img src="/storage/emulated/0/Pictures/Screenshot/Screenshot_20240825-051817.jpg" alt="Livewell Logo" class="logo">
+        <div class="company-info1">
+            <h1>Livewell Housing Solutions Limited</h1>
+            <p>...own your tomorrow</p>
+        </div>
+    </div>
+
+    <h2>MEMBERSHIP FORM</h2>
+    <p class="instruction1">Complete the form below to sign up for membership to Livewell Housing Community</p>
+
+    
+    <br>
+    <form id="membership-form" onsubmit="sendFormData(event)">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="serialNo">Serial No:</label>
+            <input type="text" id="serialNo" name="serialNo" readonly>
+
+            <label for="stateOfOrigin">State of Origin:</label>
+            <input type="text" id="stateOfOrigin" name="stateOfOrigin">
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob">
+
+            <label for="residentialAddress">Residential Address:</label>
+            <input type="text" id="residentialAddress" name="residentialAddress">
+
+            <label for="maritalStatus">Marital Status:</label>
+            <input type="text" id="maritalStatus" name="maritalStatus">
+
+            <label for="mobileNo">Mobile No:</label>
+            <input type="text" id="mobileNo" name="mobileNo">
+
+            <label for="occupation">Occupation:</label>
+            <input type="text" id="occupation" name="occupation">
+
+            <label for="monthlySavings">Monthly savings (optional):</label>
+            <input type="text" id="monthlySavings" name="monthlySavings">
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email">
+                
+            <label for="date">Date of Registration:</label>
+            <input type="date" id="date" name="date" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Next of Kin</legend>
+            <label for="kinFullName">Full Name:</label>
+            <input type="text" id="kinFullName" name="kinFullName">
+
+            <label for="relationship">Relationship:</label>
+            <input type="text" id="relationship" name="relationship">
+
+            <label for="kinAddress">Address:</label>
+            <input type="text" id="kinAddress" name="kinAddress">
+
+            <label for="kinSerialNo">Kin Serial No:</label>
+            <input type="text" id="kinSerialNo" name="kinSerialNo" readonly>
+        </fieldset>
+
+        <fieldset>
+            <legend>Referee</legend>
+            <label for="refereeName">Name of Referee:</label>
+            <input type="text" id="refereeName" name="refereeName">
+
+            <label for="refereePhone">Referee Phone Number:</label>
+            <input type="text" id="refereePhone" name="refereePhone">
+
+            <label for="refereeEmail">Referee Email address:</label>
+            <input type="text" id="refereeEmail" name="refereeEmail">
+
+            <label for="refereeSerialNo">Referee Serial No:</label>
+            <input type="text" id="refereeSerialNo" name="refereeSerialNo">
+
+            <label for="refereeSignature">Referee Signature:</label>
+            <input type="text" id="refereeSignature" name="refereeSignature">
+
+            <label for="refereeAddress">Address:</label>
+            <input type="text" id="refereeAddress" name="refereeAddress">
+        </fieldset>
+
+        <p class="guarantee-question1">
+            CAN YOU GUARANTEE SOMEONE INTRODUCED BY YOU? <span>Yes / No</span>
+        </p>
+
+        <p class="terms1">
+            Do you agree to the terms and conditions and promise to abide by the regulation governing LIVEWELL HOUSING SOL. LTD? If yes, please Sign:
+        </p>
+
+        <label for="signature">Signature & Date:</label>
+        <input type="text" id="signature" name="signature">
+
+        <div class="button-container">
+            <button type="submit">Submit</button>
+            
+        </div>
+    </form>
+</div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <div class="button-container">
+            <button onclick="toggleSection('business-model-2', 'message-button-2', 'message-icon-2', 'message-text-2')">Close</button>
+            <button onclick="scrollToTop()">Back to Top</button>
+        </div>
+    </div>
+</section>
+
+</section>
+    
+    
+    
+    
+    
+    
+    
+
+    <section id="media">
+        <h2>Media</h2>
+        <div class="video-container">
+            <h3>Company Overview Video</h3>
+        <div class="video-container">
+            <div class="thumbnail-container">
+                <img class="thumbnail" src="/20240804_135541.jpg" alt=" part 1" data-video-url="/lv_0_20240804103319_compressed.mp4" onclick="playVideo(this)">
+                <img class="thumbnail" src="/20240804_135619.jpg" alt="part 2" data-video-url="/lv_0_20240804104327_compressed.mp4" onclick="playVideo(this)">
+                <img class="thumbnail" src="/20240804_135652.jpg" alt="part 3" data-video-url="/lv_0_20240804105611_compressed.mp4" onclick="playVideo(this)">
+            </div>
+            <video id="main-video" class="main-video" controls>
+                <source src="/VID-20240807-WA0015.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="#" onclick="downloadMedia('/lv_0_20240804103319_compressed.mp4' )" class="download-link">Download Video</a>
+        </div>
+        <div class="media-content">
+            <h3> Listen to the Business Model </h3>
+            <audio id="audio" controls onplay="playMedia(this)">
+                <source id="audio-source" src=" " type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <a href="#" onclick="downloadMedia(' ')" class="download-link">Download Voice Note</a>
+            <br>
+            <label for="language-select">Select Language:</label>
+            <select id="language-select" onchange="changeAudioLanguage(this.value)">
+                <option value="english">English</option>
+                <option value="yoruba">Yoruba</option>
+                <option value="igbo">Igbo</option>
+                <option value="hausa">Hausa</option>
+                <option value="pigin">Pigin</option>
+            </select>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form" onsubmit="handleSubmit(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Livewell Housing Solutions Ltd. All rights reserved.</p>
+	    <p>&copy; 2024 Emperorstatesman | 07045786155 . All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+
